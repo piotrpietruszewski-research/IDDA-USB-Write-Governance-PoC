@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IDDA USB Write Governance — Public Evidence Console</title>
+
+<style>
+body{
+    margin:0;
+    background:#0b0f14;
+    color:#e7edf5;
+    font-family:Arial,sans-serif;
+}
+
+header{
+    padding:34px 46px;
+    background:#111827;
+    border-bottom:1px solid #2b3544;
+}
+
+h1{
+    margin:0;
+    font-size:34px;
+}
+
+.subtitle{
+    margin-top:10px;
+    color:#9fb0c3;
+    font-size:17px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+    padding:34px 46px;
+}
+
+.card{
+    background:#121a24;
+    border:1px solid #2b3544;
+    border-radius:18px;
+    padding:26px;
+    box-shadow:0 12px 34px rgba(0,0,0,0.35);
+}
+
+.label{
+    color:#9fb0c3;
+    font-size:15px;
+    margin-bottom:12px;
+}
+
+.value{
+    font-size:44px;
+    font-weight:800;
+}
+
+.simple{ color:#fbbf24; }
+.idda{ color:#34d399; }
+.gain{ color:#60a5fa; }
+
+.section{
+    padding:0 46px 34px 46px;
+}
+
+.panel{
+    background:#121a24;
+    border:1px solid #2b3544;
+    border-radius:18px;
+    padding:26px;
+}
+
+h2{
+    margin-top:0;
+}
+
+.bar{
+    height:24px;
+    background:#263241;
+    border-radius:999px;
+    overflow:hidden;
+    margin:10px 0 22px 0;
+}
+
+.fill-simple{
+    height:100%;
+    width:50%;
+    background:#fbbf24;
+}
+
+.fill-idda{
+    height:100%;
+    width:70.48%;
+    background:#34d399;
+}
+
+.fill-gain{
+    height:100%;
+    width:40.96%;
+    background:#60a5fa;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:14px;
+}
+
+th,td{
+    padding:13px 15px;
+    border-bottom:1px solid #2b3544;
+    text-align:left;
+}
+
+th{
+    background:#0f1722;
+    color:#9fb0c3;
+}
+
+.note{
+    line-height:1.65;
+    color:#c8d3df;
+    font-size:16px;
+}
+
+.badge{
+    display:inline-block;
+    padding:6px 10px;
+    border:1px solid #2b3544;
+    border-radius:999px;
+    color:#9fb0c3;
+    margin-right:8px;
+}
+
+footer{
+    padding:24px 46px;
+    color:#7f8ea3;
+    border-top:1px solid #2b3544;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>IDDA USB Write Governance — Public Evidence Console</h1>
+
+    <div class="subtitle">
+        Public-safe runtime demonstration — no protected implementation details included.
+    </div>
+</header>
+
+<div class="grid">
+
+    <div class="card">
+        <div class="label">
+            Simple filter average reduction
+        </div>
+
+        <div class="value simple">
+            50.00%
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="label">
+            IDDA average reduction
+        </div>
+
+        <div class="value idda">
+            70.48%
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="label">
+            Additional IDDA gain
+        </div>
+
+        <div class="value gain">
+            40.96%
+        </div>
+    </div>
+
+</div>
+
+<div class="section">
+
+    <div class="panel">
+
+        <h2>Validation overview</h2>
+
+        <p>
+            <span class="badge">10 validation runs</span>
+            <span class="badge">5000 samples per run</span>
+            <span class="badge">Physical USB media</span>
+        </p>
+
+        <div class="label">
+            Simple filter reduction
+        </div>
+
+        <div class="bar">
+            <div class="fill-simple"></div>
+        </div>
+
+        <div class="label">
+            IDDA reduction
+        </div>
+
+        <div class="bar">
+            <div class="fill-idda"></div>
+        </div>
+
+        <div class="label">
+            Additional IDDA gain
+        </div>
+
+        <div class="bar">
+            <div class="fill-gain"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="section">
+
+    <div class="panel note">
+
+        <h2>Technical interpretation</h2>
+
+        <p>
+            RAW execution writes every generated block.
+            A simple filter reduces activity using one acceptance condition.
+        </p>
+
+        <p>
+            IDDA demonstrates additional reduction of write activity
+            through runtime optimization and execution stabilization.
+        </p>
+
+        <p>
+            The presented reduction was repeatable across all validation runs.
+        </p>
+
+    </div>
+
+</div>
+
+<div class="section">
+
+    <div class="panel">
+
+        <h2>Validation consistency</h2>
+
+        <table>
+
+            <tr>
+                <th>Run</th>
+                <th>Simple reduction</th>
+                <th>IDDA reduction</th>
+                <th>IDDA gain</th>
+            </tr>
+
+            <tr><td>Run 01</td><td>50.00%</td><td>70.48%</td><td>40.96%</td></tr>
+            <tr><td>Run 02</td><td>50.00%</td><td>70.48%</td><td>40.96%</td></tr>
+            <tr><td>Run 03</td><td>50.00%</td><td>70.50%</td><td>41.00%</td></tr>
+            <tr><td>Run 04</td><td>50.00%</td><td>70.48%</td><td>40.96%</td></tr>
+            <tr><td>Run 05</td><td>50.00%</td><td>70.48%</td><td>40.96%</td></tr>
+            <tr><td>Run 06</td><td>50.00%</td><td>70.48%</td><td>40.96%</td></tr>
+            <tr><td>Run 07</td><td>50.00%</td><td>70.48%</td><td>40.96%</td></tr>
+            <tr><td>Run 08</td><td>50.00%</td><td>70.48%</td><td>40.96%</td></tr>
+            <tr><td>Run 09</td><td>50.00%</td><td>70.48%</td><td>40.96%</td></tr>
+            <tr><td>Run 10</td><td>50.00%</td><td>70.48%</td><td>40.96%</td></tr>
+
+        </table>
+
+    </div>
+
+</div>
+
+<div class="section">
+
+    <div class="panel note">
+
+        <h2>Boundary statement</h2>
+
+        <p>
+            This public PoC demonstrates repeatable runtime behavior only.
+        </p>
+
+        <p>
+            It is not a production storage benchmark,
+            endurance certification,
+            or universal hardware performance claim.
+        </p>
+
+        <p>
+            Internal execution logic, tuning policies and protected runtime details
+            are intentionally excluded from the public release.
+        </p>
+
+    </div>
+
+</div>
+
+<footer>
+    IDDA Public Runtime Demonstration
+</footer>
+
+</body>
+</html>
